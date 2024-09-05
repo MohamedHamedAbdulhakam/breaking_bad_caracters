@@ -1,4 +1,5 @@
 import 'package:breaking_bad_caracters/buisness_logic_layer/cubit/characters_cubit.dart';
+import 'package:breaking_bad_caracters/constants/colors.dart';
 import 'package:breaking_bad_caracters/data_layer/models/characters.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,8 +23,17 @@ class _CharactersScreenState extends State<CharactersScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('hello mohamed'),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: MyColors.grey,
+        title: const Text('Breaking Bad Characters'),
+      ),
+      body: BlocBuilder<CharactersCubit, CharactersState>(
+          builder: (context, state) {
+        if (State is CharactersLoaded) {
+          allCharacters = state.
+        } else {}
+      }),
     );
   }
 }
