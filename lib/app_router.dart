@@ -1,7 +1,6 @@
-import 'package:breaking_bad_caracters/constants.dart';
-import 'package:breaking_bad_caracters/constants/strings.dart';
-import 'package:breaking_bad_caracters/presentation_layer/screens/characters_deatailsa_screen.dart';
-import 'package:breaking_bad_caracters/presentation_layer/screens/characters_screen.dart';
+import 'constants/strings.dart';
+import 'presentation_layer/screens/characters_deatailsa_screen.dart';
+import 'presentation_layer/screens/characters_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {

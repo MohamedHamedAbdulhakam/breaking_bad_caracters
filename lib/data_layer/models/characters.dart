@@ -1,10 +1,10 @@
-class characters {
+class Character {
   Info? info;
   List<Results>? results;
 
-  characters({this.info, this.results});
+  Character({this.info, this.results});
 
-  characters.fromJson(Map<String, dynamic> json) {
+  Character.fromJson(Map<String, dynamic> json) {
     info = json['info'] != null ? new Info.fromJson(json['info']) : null;
     if (json['results'] != null) {
       results = <Results>[];
