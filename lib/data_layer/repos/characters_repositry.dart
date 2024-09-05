@@ -7,7 +7,7 @@ class CharactersRepositry {
   CharactersRepositry(
     this.charactersWebServices,
   );
-  Future<List<dynamic>> getAllCharacters() async {
+  Future<List<Character>> getAllCharacters() async {
     final characters = await charactersWebServices
         .getAllCharacters(); //getAllCharacters from web services
     return characters /* the above*/
