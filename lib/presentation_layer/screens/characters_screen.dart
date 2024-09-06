@@ -1,6 +1,7 @@
 import 'package:breaking_bad_caracters/buisness_logic_layer/cubit/characters_cubit.dart';
 import 'package:breaking_bad_caracters/constants/colors.dart';
 import 'package:breaking_bad_caracters/data_layer/models/characters.dart';
+import 'package:breaking_bad_caracters/presentation_layer/widgets/build_loaded_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -30,9 +31,16 @@ class _CharactersScreenState extends State<CharactersScreen> {
       ),
       body: BlocBuilder<CharactersCubit, CharactersState>(
           builder: (context, state) {
-        if (State is CharactersLoaded) {
-          allCharacters = state.
-        } else {}
+        if (state is CharactersLoaded) {
+          allCharacters = state.characters;
+          return const BuildLoadedListWidget();
+        } else {
+          return const Center(
+            child: CircularProgressIndicator(
+              color: MyColors.yellow,
+            ),
+          );
+        }
       }),
     );
   }
